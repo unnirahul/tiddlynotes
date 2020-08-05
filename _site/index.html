@@ -194,11 +194,17 @@ Error message and password prompt
 
 <li>$:/SiteSubtitle</li>
 
+<li>$:/state/tiddlypouch/sync/Log</li>
+
+<li>$:/state/tiddlypouch/sync/status</li>
+
 <li>$:/status/IsAnonymous</li>
 
 <li>$:/status/IsLoggedIn</li>
 
 <li>$:/status/IsReadOnly</li>
+
+<li>$:/status/UserName</li>
 
 <li>$:/StoryList</li>
 
@@ -209,6 +215,12 @@ Error message and password prompt
 <li>$:/themes/tiddlywiki/vanilla</li>
 
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
+
+<li>2nd Tiddler</li>
+
+<li>My first tiddle</li>
+
+<li>New Tiddler - Couch</li>
 
 </ul>
 </p>
@@ -9425,7 +9437,7 @@ Error message and password prompt
 <pre>no</pre>
 </div>
 <div title="$:/language/LoginToTiddlySpace">
-<pre>Login to remote database &lt;b&gt;null&lt;/b&gt; at: null</pre>
+<pre>Login to remote database &lt;b&gt;tiddlynotes&lt;/b&gt; at: https://ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix.cloudantnosqldb.appdomain.cloud/</pre>
 </div>
 <div author="Ben Webber" core-version="&gt;=5.0.0" dependents="$:/languages/en-GB" description="English (US)" name="en-US" plugin-priority="110" plugin-type="language" title="$:/languages/en-US" type="application/json" version="5.1.21">
 <pre>{
@@ -9879,18 +9891,18 @@ Error message and password prompt
 }</pre>
 </div>
 <div title="$:/plugins/danielo515/tiddlypouch/config/config_database" type="application/json">
-<pre>{&quot;debug&quot;:{&quot;active&quot;:true,&quot;verbose&quot;:false},&quot;selectedDbId&quot;:&quot;MyNotebook&quot;,&quot;useFatTiddlers&quot;:false,&quot;databases&quot;:{&quot;MyNotebook&quot;:{&quot;name&quot;:&quot;MyNotebook&quot;,&quot;remote&quot;:{&quot;name&quot;:null,&quot;username&quot;:null,&quot;url&quot;:null},&quot;version&quot;:&quot;0.27.7&quot;}},&quot;_id&quot;:&quot;configuration&quot;,&quot;_rev&quot;:&quot;5-2ffc7ecfe6fcdd59cdedac0f24ef3431&quot;}</pre>
+<pre>{&quot;debug&quot;:{&quot;active&quot;:true,&quot;verbose&quot;:false},&quot;selectedDbId&quot;:&quot;MyNotebook&quot;,&quot;useFatTiddlers&quot;:false,&quot;databases&quot;:{&quot;MyNotebook&quot;:{&quot;name&quot;:&quot;MyNotebook&quot;,&quot;remote&quot;:{&quot;name&quot;:&quot;tiddlynotes&quot;,&quot;username&quot;:null,&quot;url&quot;:&quot;https://ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix.cloudantnosqldb.appdomain.cloud&quot;},&quot;version&quot;:&quot;0.27.7&quot;}},&quot;_id&quot;:&quot;configuration&quot;,&quot;_rev&quot;:&quot;19-d54d089f0f4f4182fa33e2c1d7cd1017&quot;}</pre>
 </div>
 <div list="MyNotebook" title="$:/plugins/danielo515/tiddlypouch/config/database_names">
 <pre>{{!!list}}</pre>
 </div>
 <div title="$:/plugins/danielo515/tiddlypouch/config/selected_database" type="application/json">
-<pre>{&quot;name&quot;:&quot;MyNotebook&quot;,&quot;version&quot;:&quot;0.27.7&quot;}</pre>
+<pre>{&quot;name&quot;:&quot;MyNotebook&quot;,&quot;remote.name&quot;:&quot;tiddlynotes&quot;,&quot;remote.url&quot;:&quot;https://ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix.cloudantnosqldb.appdomain.cloud&quot;,&quot;version&quot;:&quot;0.27.7&quot;}</pre>
 </div>
 <div debug="true" title="$:/plugins/danielo515/tiddlypouch/ui/Config" useFatTiddlers="false" verbose="false">
 <pre></pre>
 </div>
-<div tags="" title="$:/plugins/danielo515/tiddlypouch/ui/sync-flag">
+<div tags="$:/tags/PageControls" title="$:/plugins/danielo515/tiddlypouch/ui/sync-flag">
 <pre>&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/tiddlypouch/sync/status&quot; text=&quot;offline&quot;&gt;
 {{$:/plugins/danielo515/tiddlypouch/ui/buttons/login}}
 &lt;/$reveal&gt;
@@ -10133,16 +10145,131 @@ Error message and password prompt
 <div title="$:/SiteSubtitle">
 <pre>&lt;&lt;tiddlypouch-tab MyNotebook Database &gt;&gt;</pre>
 </div>
+<div title="$:/state/tiddlypouch/sync/Log" type="text/plain">
+<pre>
+
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 4,
+        &quot;docs_written&quot;: 4,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 35
+    }
+}
+===SYNC PAUSED===
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 5,
+        &quot;docs_written&quot;: 5,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 40
+    }
+}
+===SYNC PAUSED===
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 6,
+        &quot;docs_written&quot;: 6,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 41
+    }
+}
+===SYNC PAUSED===
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 7,
+        &quot;docs_written&quot;: 7,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 42
+    }
+}
+===SYNC PAUSED===
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 8,
+        &quot;docs_written&quot;: 8,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 43
+    }
+}
+===SYNC PAUSED===
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 9,
+        &quot;docs_written&quot;: 9,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 44
+    }
+}
+===SYNC PAUSED===
+===SYNC ACTIVE===
+replicate resumed
+===SYNC Change==={
+    &quot;direction&quot;: &quot;push&quot;,
+    &quot;change&quot;: {
+        &quot;ok&quot;: true,
+        &quot;start_time&quot;: &quot;2020-08-05T13:27:56.920Z&quot;,
+        &quot;docs_read&quot;: 10,
+        &quot;docs_written&quot;: 10,
+        &quot;doc_write_failures&quot;: 0,
+        &quot;errors&quot;: [],
+        &quot;last_seq&quot;: 46
+    }
+}
+===SYNC PAUSED===</pre>
+</div>
+<div created="20200805132757004" creator="ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix" modified="20200805132932168" modifier="ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix" title="$:/state/tiddlypouch/sync/status">
+<pre>paused</pre>
+</div>
 <div title="$:/status/IsAnonymous">
 <pre>no</pre>
 </div>
 <div title="$:/status/IsLoggedIn">
-<pre>no</pre>
+<pre>yes</pre>
 </div>
 <div title="$:/status/IsReadOnly">
 <pre>no</pre>
 </div>
-<div list="$:/Import GettingStarted" title="$:/StoryList">
+<div title="$:/status/UserName">
+<pre>ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix</pre>
+</div>
+<div list="[[2nd Tiddler]] [[New Tiddler - Couch]] GettingStarted" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10314,6 +10441,15 @@ Error message and password prompt
 </div>
 <div title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
+</div>
+<div created="20200805132914362" creator="ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix" modified="20200805132930794" modifier="ba93b8ae-0a3c-4542-8254-0424f0e88559-bluemix" tags="" title="2nd Tiddler">
+<pre>Test</pre>
+</div>
+<div created="20200805124845663" modified="20200805124859722" revision="1-042366613dea4a04c436a0b636401f9d" tags="" title="My first tiddle" type="text/vnd.tiddlywiki">
+<pre></pre>
+</div>
+<div created="20200805132509912" modified="20200805132529491" tags="" title="New Tiddler - Couch">
+<pre>Does this save to Couch?</pre>
 </div>
 
 </div>
